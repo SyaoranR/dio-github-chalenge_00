@@ -1,0 +1,154 @@
+IDE - Integrated Developing Environment
+Ex: VS Code, NetBeans, Eclipse
+
+Frameworks - geram o "esqueleto" do código, soluções pré-definidas, 
+operações repetidas, códigos reutilizáveis, tipo snnipets
+Ex: Angular, Spring (JAVA), Vue (Js), Laravel e CakePHP (PHP)
+
+API - Application Programming Interface 
+Intermediário de "Conversa" entre dois Aplicativos
+
+Request - API - Query on DB
+Web Server - API - Response
+
+Abdução - Conclusão
+Indução - Experimentação
+Dedução - premissas gerais -> Conclusão
+
+Blobs - Trees - Commits
+
+Trees - "pastas".
+Blob obj que encapsula o comportamento de diretórios e é usado para apontar diretórios que contém arquivos e para arquivos.
+Commit aponta para tree, para parente (último) para autor e mensagem.
+
+In Git, a blob (Binary Large Object) is the fundamental object type used to store the raw content of a file. 
+It is essentially a sequence of bytes, without any associated metadata like a filename, timestamp, or directory structure; 
+those details are stored in other Git objects like "trees" and "commits". 
+
+Key Characteristics of a Git Blob
+Content-Addressable: Blobs are identified by the SHA-1 hash of their content. This means that if two files in a repository 
+(or in different commits) have the exact same content, they will reference the same single blob object in Git's internal database, 
+saving storage space.
+Immutable: Once created, a blob object cannot be changed. Any modification to a file results in the creation of an entirely new blob with 
+a different SHA-1 hash.
+Raw Data: A blob is a full snapshot of the file's content at a given time, not a record of the differences (diff) from a previous version. 
+Git calculates differences between blobs when you run commands like git diff.
+Internal Detail: For the most part, users do not need to interact with blobs directly. Git's user-facing ("porcelain") 
+commands (like git add and git commit) manage the creation and linking of blobs automatically. 
+
+How Git Uses Blobs
+When you add a file to the staging area using git add, Git:
+Compresses the file's content.
+Calculates the SHA-1 hash of the content (along with a small header).
+Stores the compressed data as a new blob file within the .git/objects directory. 
+
+These blobs are then referenced by "tree" objects, which organize files into directory hierarchies, and "commit" objects, 
+which capture the overall project snapshot at a specific point in history. You can manually inspect the contents of a 
+blob using the Git cat-file command with the -p (pretty-print) option and the blob's hash.
+
+
+In Git, the term "tree" refers to two main concepts: a core internal object type used for representing directory structures, 
+and the user-facing working tree (or working directory) where you edit files. 
+
+1. The Git "Tree" Object
+A tree object is a fundamental, low-level component of Git's object database that models a single directory's contents and hierarchy. 
+It is a snapshot of your project's structure at a specific point in time and contains: 
+
+A list of entries, one for each file or subdirectory within that directory.
+For files, a pointer (SHA-1 hash) to a blob object (which stores the raw file content) along with the file's name and permissions (mode).
+For subdirectories, a pointer (SHA-1 hash) to another tree object, recursively building the full directory hierarchy. 
+
+When you create a commit, Git calculates the SHA-1 hash of the top-level tree object, which in turn references all other 
+files and subdirectories. The commit object then stores a pointer to this single root tree, 
+along with other metadata like the author, committer, and commit message. This content-addressable storage model ensures efficiency, 
+as identical files or directories across different commits are only stored once. 
+
+2. The Git "Working Tree"
+The working tree (or working directory) is the physical directory on your local filesystem where you can see, edit, add, and remove files. 
+This is where your actual work happens. 
+
+Key characteristics of the working tree:
+It is a single checkout of one version of your project.
+Changes you make here are tracked by Git's "index" (staging area) before being permanently recorded in the repository as a commit.
+It's distinct from the internal .git directory, which houses the object database and other repository metadata.
+The git worktree command allows you to have multiple working trees associated with a single repository, enabling you to work 
+on different branches simultaneously without constantly stashing and switching branches.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+ssh-keygen -t ed25519 -c [gitUserEmail]
+cat i_ed25519
+eval $(ssh-agent -s)
+ssh-add id_ed25519
+
+
+(r-click git bash here)
+ls -a arquivos ocultos
+cd - change dir
+cd .git/
+ls
+cd..
+
+git config --global user.email "user_email"
+git config --global user.name <Nick>
+
+h1
+#Texto 
+**bold**
+_italic_
+:emoji
+
+h3
+###Text
+" " - " "
+
+Toolbar in .md file
+Markdown Reference
+
+git add * 
+or all
+or .
+
+git commit -m "msg"
+git status
+
+mv file <destiny>
+
+update to commit
+git add/rm <file> 
+
+discard changes
+git restore <file> 
+
+
+GITHUB
+
+git config --list
+q
+git config --global --unset user.email
+git config --global --unset user.nickname
+git config --list
+q
+git config --global user.email "email"
+git config --global user.nickname "nick"
+
+git remote -v
+
+
+git push origin master
+if git push doesn't work
+git pull origin master
+
+
+git add *
+git commit -m "msg"
+git push origin master
+
+
+git clone https://github.com/user/repo.git
+cd repo
+git status
+git add .
+or 
+git add -A
