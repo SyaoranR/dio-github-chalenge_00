@@ -1,2 +1,2 @@
-# dio-github-chalenge_00
+# DIO-github-chalenge Repo
 Git/GitHub Project Chalenge 
