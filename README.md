@@ -1,2 +1,2 @@
-# DIO-github-challenges Repo
-Git/GitHub Project challenges 
+# DIO-github-challenge Repo
+Git/GitHub Project Challenge 
