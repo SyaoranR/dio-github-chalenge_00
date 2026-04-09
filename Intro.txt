@@ -1,3 +1,6 @@
+Digital Innovation One
+DIO
+
 IDE - Integrated Developing Environment
 Ex: VS Code, NetBeans, Eclipse
 
@@ -152,3 +155,60 @@ git status
 git add .
 or 
 git add -A
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Search for
+IDE Shortcuts Programming Lang
+
+JAVA
+
+return x.concat(" ").concat(y);
+
+VS Code
+ctrl + shift + t
+ctrl + shift + p
+
+
+https://felipe-aguiar.gitbook.io/dio-java/gitbook
+https://github.com/digitalinnovationone/trilha-java-basico
+https://github.com/cami-la/loops-e-arrays
+
+shift f9 (debug)
+
+https://github.com/thiagoleitecarvalho
+https://github.com/tlcdio
+
+Polimorfismo - se comporta diferente
+Sobrescrita - adiciona comportamento(s)
+
+alt + insert - programming shortcuts
+Implementando Collections e Streams com Java (Wesley Fuchter)
+Desenvolvimento Avançado em Java (João Paulo)
+Aprenda o que são estrutura de dados e algoritmos (Bruno Campos)
+
+JAVA.... 26!!!! WHAT THEEEE??!!
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+void main() {
+    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+    // to see how IntelliJ IDEA suggests fixing it.
+    IO.println(String.format("Hello and welcome!"));
+
+    for (int i = 1; i <= 5; i++) {
+        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+        IO.println("i = " + i);
+    }
+}
+
+
+// Conteudo dentro de Curso - Conteudo está contido em Curso - Curso contém Conteúdo
+// Conteudo conteudo = new Curso();
+
+// Conteudo dentro de Mentoria - Conteudo está contido em Mentoria - Mentoria contém Conteúdo
+// Conteudo conteudo = new Mentoria();
+
+HTTP Client Server
+Armazenar, transferir e recuperar informações.

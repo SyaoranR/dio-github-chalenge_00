@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class chalenge {
+public class challenge {
 
     public static void main(String[] args) throws IOException {
         Scanner read = new Scanner(System.in);

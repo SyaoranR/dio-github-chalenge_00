@@ -4,7 +4,7 @@
 let a = parseInt(gets());
 let b = parseInt(gets());
 
-//TODO: Complete chalenge solution
+//TODO: Complete challenges solution
 
 // let sum = ;
 let sum = a + b; // my solution
